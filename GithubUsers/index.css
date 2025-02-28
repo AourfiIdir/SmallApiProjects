@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Edu+NSW+ACT+Foundation:wght@688&family=Madimi+One&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Space+Grotesk:wght@300..700&display=swap');
+:root{
+    --fontStyle:"Edu NSW ACT Foundation", serif;
+    --font-weight: 432;
+
+}
+
+.typing-effect p {
+  font-family: monospace; /* Monospace font for a typewriter effect */
+  overflow: hidden; /* Hide overflow to create the typing effect */
+  border-right: .15em solid orange; /* Cursor effect */
+  white-space: nowrap; /* Keep text on one line */
+  margin: 0 auto; /* Center the text */
+  letter-spacing: .15em; /* Adjust spacing for better effect */
+  animation: typing 3.5s steps(10, end), blink-caret .75s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Cursor blink animation */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: orange; }
+}
+
+/* styles.css */
+body, html {
+  font-family: var(--fontStyle);
+  font-weight: var(--font-weight);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background: radial-gradient(circle, #000428, #004e92); /* Space gradient */
+  }
+  
+  .space {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    animation: twinkle 2s infinite ease-in-out;
+  }
+  
+  @keyframes twinkle {
+    0%, 100% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    color: whitesmoke;
+    margin-top: 20px;
+    margin-inline: 400px;
+    
+  }
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 200px;
+}
+input {
+  padding: 10px 15px; /* Add padding */
+  border: 2px solid #ccc; /* Border color */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  outline: none; /* Remove default outline */
+  transition: border-color 0.3s ease; /* Smooth transition for hover/focus */
+}
+
+input:focus {
+  border-color: #007bff; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle glow */
+}
+button{
+  padding: 10px 15px; /* Add padding */
+  border: 2px solid #ccc; /* Border color */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  outline: none; /* Remove default outline */
+  transition: border-color 0.3s ease; /* Smooth transition for hover/focus */
+  background-color: #007bff; /* Blue background color */
+  color: white; /* White text color */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  margin-top: 10px; /* Add some top margin */
+  width: 100px; /* Set the width */
+  text-align: center; /* Center the text */
+  margin-inline: 10px;  /* Add some left and right margin */  
+}

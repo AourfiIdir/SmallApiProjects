@@ -1,0 +1,54 @@
+*{
+    box-sizing: content-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    text-align: center;
+    height: 100vh;
+}
+
+.users{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+    border-right: black 10px solid;
+    padding: 5px;
+    background-color: aqua;
+}
+.posts{
+    flex: 2;
+    font-size: 30px;
+    background-color: khaki;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow: scroll;
+}
+button{
+    padding: 10px;
+    border-radius: 20px;
+    background-color: blue;
+    color: white;
+}
+button:hover{
+    background-color: darkblue;
+}
+p{
+    padding: 10px;
+    border-radius: 20px;
+    background-color: lightblue;
+    color: black;
+    margin: 5px;
+    text-align: center;
+    
+}
+p:hover{
+    background-color: lightgreen;
+}
