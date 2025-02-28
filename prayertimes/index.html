@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prayer Time</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Prayer Times</h1>
+        <h2 id="date_container"></h2>
+        <div class="second_container">
+            <div class="fajr item">
+                <img src="/imgs/farj.jpg" alt="Fajr">
+                <h2 id="fajr">Fajr</h2> <!-- Added ID -->
+            </div>
+            <div class="dhuhr item">
+                <img src="/imgs/dhuhr.jpg" alt="Dhuhr">
+                <h2 id="dhuhr">Dhuhr</h2> <!-- Added ID -->
+            </div>
+            <div class="asr item">
+                <img src="/imgs/asr.jpg" alt="Asr">
+                <h2 id="asr">Asr</h2> <!-- Added ID -->
+            </div>
+            <div class="maghrib  item">
+                <img src="/imgs/maghrib.jpg" alt="Maghrib">
+                <h2 id="maghrib">Maghrib</h2> <!-- Added ID -->
+            </div>
+            <div class="isha item">
+                <img src="/imgs/aisha.jpg" alt="Isha">
+                <h2 id="isha">Isha</h2> <!-- Added ID -->
+            </div>
+        </div>
+        <div class="form">
+            <label for="city">City</label>
+            <input type="text" id="city" placeholder="Enter city">
+            <label for="country">Country</label>
+            <input type="text" id="country" placeholder="Enter country">
+            <button class="submit">Submit</button>
+        </div>
+    </div>
+
+    <!-- Load JavaScript at the end of the body -->
+    <script src="index.js"></script>
+</body>
+</html>
