@@ -1,0 +1,92 @@
+*{
+    box-sizing: content-box;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+
+}
+body{
+    background-color: cornflowerblue;
+}
+img{
+    width: 100%;
+}
+.container{
+    margin-inline: auto;
+    margin-top: 200px;
+    background-color:aliceblue ;
+    width: 500px;
+    border-radius: 10px;
+    padding: 60px;
+}
+.second_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.item:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.dhuhr{
+    background-color: #f1c40f;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+.asr{
+    background-color: #e74c3c;
+    padding: 10px;
+    border-radius: 10px;
+}
+.maghrib{
+    background-color: #3498db;
+    padding: 10px;
+    border-radius: 10px;
+}
+.isha{
+    background-color: #9b59b6;
+    padding: 10px;
+    border-radius: 10px;
+}
+.fajr{
+    background-color: #2ecc71;
+    padding: 10px;
+    border-radius: 10px;
+}
+h1{
+    margin-bottom: 20px;
+}
+h2{
+    margin-top: 20px;
+}
+.second_container{
+    margin-bottom: 10px;
+}
+button{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f39c12;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+input{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+    width: 100%;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+
+}
+
