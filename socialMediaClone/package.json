@@ -1,0 +1,22 @@
+{
+  "name": "socialmediaclone",
+  "version": "1.0.0",
+  "description": "social media clone using tarmiz API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AourfiIdir/SmallApiProjects.git"
+  },
+  "author": "idir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AourfiIdir/SmallApiProjects/issues"
+  },
+  "homepage": "https://github.com/AourfiIdir/SmallApiProjects#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}

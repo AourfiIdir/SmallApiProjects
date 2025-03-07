@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>socialMediaClone</title>
+    <link rel="stylesheet" href="/socialMediaClone/src/index.css">
+    <link rel="stylesheet" href="/socialMediaClone/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        body{
+            background-color: #b079e0;
+           
+        }
+        nav{
+          margin-inline: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="liveAlertPlaceholder" style="position: fixed; bottom: 0;right: 0;width: 30%; z-index: 99999;"></div>
+    <div id="liveAlertPlaceholder2"></div>
+
+    <!-- =============MODALS============== -->
+    
+    <!-- LOGIN MODAL -->
+    <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">LOGIN</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">USERNAME</label>
+                <input type="text" class="form-control" id="loginUserName">
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">PASSWORD</label>
+                <input type="password" class="form-control" id="loginPassword">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="loginBtnClicked()">login</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- LOGIN MODAL -->
+
+    <!-- REGISTER MODAL -->
+    <div class="modal fade" id="register" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">register</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">USERNAME</label>
+                <input type="text" class="form-control" id="registerUserName">
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">PASSWORD</label>
+                <input type="password" class="form-control" id="registerPassword">
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">name</label>
+                <input type="password" class="form-control" id="registerName">
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">email</label>
+                <input type="password" class="form-control" id="registerEmail">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="closeRegisterModal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="registerBtnClicked()">register</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- END REGISTER MODAL -->
+    <!-- =============MODALS============== -->
+    <!-- navBar -->
+    <div class="container shadow p-3 mb-5 bg-body-tertiary rounded bg-danger col-9">
+      
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Idir</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">profile</a>
+                </li>
+              </ul>
+              <!-- display nav bar for non registered -->
+              <div class="d-flex w-100 justify-content-end " id="loginDiv">
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#login" data-bs-whatever="@mdo" class="btn btn-outline-success mx-2" id="loginBtn">login</button>
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#register" data-bs-whatever="@mdo" class="btn btn-outline-success mx-2" id="registerBtn">register</button>
+              </div>
+
+              <!-- display the navbar for registered -->
+              <div class="d-flex w-100 justify-content-end " id="logoutDiv">
+                <button type="button" class="btn btn-outline-danger" id="logoutBtn" onclick="logoutBtnClicked()">logout</button>
+              </div>
+
+            </div>
+          </div>
+        </nav>
+      
+        
+    </div>
+    <!-- navBar -->
+
+    <!-- post container -->
+    <div class="container col-9" style="height: 1000px;">
+        <div id="posts">
+
+          <!-- POST1 -->
+          <div class="card shadow my-2">
+            <div class="card-header">
+              <img src="/socialMediaClone/assets/60111.jpg" alt="" srcset="" style="width: 40px; height: 40px;" class="rounded-5 border-2">
+              <b>@AourfiIdir</b>
+            </div>
+            <div class="card-body">
+              <img src="/socialMediaClone/assets/postImg.jpg" alt="" srcset="" style="width:100%;height: 300px;">
+              <h6 class="" style="color: gray; margin-left: 5px;">2 min ago</h6>
+              <h5>topic</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste sunt tempore fuga repellendus delectus. Dolorem, quisquam sunt. Sint neque 
+                quasi ab est accusantium repudiandae corporis assumenda obcaecati dolor totam? Quas!</p>
+                <hr>
+                <div class="comment">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
+                    <path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                  </svg>
+                  <span>(3) comments</span>
+                </div>
+            </div>
+          </div>
+          <!-- POST1 -->
+
+          
+        </div>
+
+    </div>
+    <!-- post container -->
+    <script src="/socialMediaClone/src/index.js"></script>
+    <script src="/socialMediaClone/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
